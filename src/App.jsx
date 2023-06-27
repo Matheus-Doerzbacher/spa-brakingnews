@@ -1,4 +1,3 @@
-import './App.css'
 import { news } from './Data' 
 import Home from './pages/Home/Home'
 
