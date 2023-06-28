@@ -1,10 +1,12 @@
+import { Card } from "../../components/Card/Card";
 import Navbar from "../../components/Navbar/Navbar";
+import { news } from '../../Data'
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <>
-            <Navbar /> 
-            <h1>Home</h1>
+            <Navbar />
+            {news.map((item, i) => <Card key={i} news={item} />)}
         </>
     )
 }
