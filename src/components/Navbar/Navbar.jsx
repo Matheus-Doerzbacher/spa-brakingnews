@@ -1,21 +1,23 @@
 import logo from '../../images/logo.png'
 import { buscar } from '../../Icons'
-import './Navbar.css'
+import { Button, Nav, ImgLogo, InputSpace } from './NavbarStyled'
+
 
 export default function Navbar() {
     return (
         <>
-            <nav>
-                <div className="input-search-space">
-                    <div className='icon-search'>{buscar}</div>
+            <Nav>
+                <InputSpace>
+                    <i>{buscar}</i>
                     <input type="text" placeholder='Pesquise por um titulo'/>
-                </div>
+                </InputSpace>
 
-                <img src={logo} alt="Logo do Breaking News" />
+                <ImgLogo src={logo} alt="Logo do Breaking News" />
 
-                <button>Entrar</button>
+                <Button>Entrar</Button>
                 
-            </nav>
+            </Nav>
         </>
     )
 }
+
