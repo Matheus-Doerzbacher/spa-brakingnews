@@ -1,11 +1,14 @@
-import { news } from './Data' 
+import { GlobalStyle } from './globalStyled'
 import Home from './pages/Home/Home'
 
 function App() {
 
-    console.log(news)
+  
   return (
-    <Home />
+    <>
+      <GlobalStyle/>
+      <Home />
+    </>
   )
 }
 
