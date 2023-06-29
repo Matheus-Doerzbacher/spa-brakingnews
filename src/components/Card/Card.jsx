@@ -3,26 +3,25 @@
 import { chatNo, likeNo } from "../../Icons";
 import { CardBody, CardContainer, CardFooter } from "./CardStyled";
 
-export function Card({ news }) {
-    console.log(news)
+export function Card(props) {
     return (
         <CardContainer>
             <CardBody>
                 <div>
-                    <h2>{news.title}</h2>
-                    <p>{news.text}</p>
+                    <h2>{props.title}</h2>
+                    <p>{props.text}</p>
                 </div>
-                <img src={news.banner} alt="Imagem da Notícia" />
+                <img src={props.banner} alt="Imagem da Notícia" />
             </CardBody>
 
             <CardFooter>
                 <div>
                     <i>{likeNo}</i>
-                    <span>{news.likes}</span>
+                    <span>{props.likes}</span>
                 </div>
                 <div>
                     <i>{chatNo}</i>
-                    <span>{news.comment}</span>
+                    <span>{props.coments}</span>
                 </div>
             </CardFooter>
         </CardContainer>
