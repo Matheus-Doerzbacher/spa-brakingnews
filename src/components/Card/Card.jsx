@@ -18,11 +18,11 @@ export function Card(props) {
             <CardFooter>
                 <div>
                     <i>{likeNo}</i>
-                    <span>{props.likes}</span>
+                    <span>{props.likes?.length}</span>
                 </div>
                 <div>
                     <i>{chatNo}</i>
-                    <span>{props.coments}</span>
+                    <span>{props.coments?.length}</span>
                 </div>
             </CardFooter>
         </CardContainer>
