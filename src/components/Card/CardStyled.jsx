@@ -13,18 +13,25 @@ export const CardContainer = styled.section`
 
 export const CardBody = styled.article`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        line-height: 1.5rem;
     }
 
     img {
-        width: 40%;
+        width: 30%;
         object-fit: cover;
         object-position: center;
     }

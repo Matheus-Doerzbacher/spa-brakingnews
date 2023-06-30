@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "../../components/Card/Card";
 import Navbar from "../../components/Navbar/Navbar";
 import { getAllNews } from "../../services/newsServices";
@@ -12,7 +12,9 @@ export default function Home() {
         setNews(response.data.results)
     }
 
-    FindAllNews()
+    useEffect(() => {
+        FindAllNews()
+    },[])
 
     return (
         <>
