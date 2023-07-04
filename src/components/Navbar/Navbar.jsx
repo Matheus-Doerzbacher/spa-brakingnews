@@ -1,6 +1,7 @@
 import logo from '../../images/logo.png'
 import { buscar } from '../../Icons'
 import { Button, Nav, ImgLogo, InputSpace } from './NavbarStyled'
+import { Outlet } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -17,6 +18,7 @@ export default function Navbar() {
                 <Button>Entrar</Button>
                 
             </Nav>
+            <Outlet/>
         </>
     )
 }
