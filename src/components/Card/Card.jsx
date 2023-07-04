@@ -2,29 +2,33 @@
 
 import { chatNo, likeNo } from "../../Icons";
 import { TextLimit } from "../TextLimit/TextLimit";
-import { CardBody, CardContainer, CardFooter } from "./CardStyled";
+import { CardBody, CardContainer, CardFooter, CardHeader } from "./CardStyled";
 
 export function Card(props) {
     return (
         <CardContainer>
-            <CardBody>
+
+            <CardBody >
                 <div>
-                    <h2>{props.title}</h2>
-                    <img src={props.banner} alt="Imagem da Notícia" />
+                    <CardHeader top={props.top}>
+                        <h2>{props.title}</h2>
+                        <TextLimit text={props.text} limit={150} />
+                    </CardHeader>
+
+                    <CardFooter>
+                        <section>
+                            <i>{likeNo}</i>
+                            <span>{props.likes?.length}</span>
+                        </section>
+                        <section>
+                            <i>{chatNo}</i>
+                            <span>{props.coments?.length}</span>
+                        </section>
+                    </CardFooter>
                 </div>
-                <TextLimit text={props.text} limit={150}/>
+                <img src={props.banner} alt="Imagem da Notícia" />
             </CardBody>
 
-            <CardFooter>
-                <div>
-                    <i>{likeNo}</i>
-                    <span>{props.likes?.length}</span>
-                </div>
-                <div>
-                    <i>{chatNo}</i>
-                    <span>{props.coments?.length}</span>
-                </div>
-            </CardFooter>
         </CardContainer>
     )
 }
